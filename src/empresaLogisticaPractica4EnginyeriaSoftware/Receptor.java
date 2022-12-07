@@ -3,30 +3,34 @@ package empresaLogisticaPractica4EnginyeriaSoftware;
 import java.sql.Date;
 
 public class Receptor {
-	private String DNI, nom, eMail;
-	private float telefon;
-	
-	public Receptor() {
-		DNI=null;
-		nom=null;
-		eMail=null;
-		telefon=0;
+	private String dni, nom, email, telefon;
+
+	public Receptor(String dni, String nom, String email, String telefon) {
+		this.dni=dni;
+		this.nom=nom;
+		this.email=email;
+		this.telefon=telefon;
 	}
-	
-	public String getDNI() {return DNI;}
-	public void setDNI(String DNI) {this.DNI=DNI;}
+
+	public String getDni() {return dni;}
+	public void setDni(String dni) {this.dni=dni;}
+
 	public String getNom() {return nom;}
 	public void setNom(String name) {nom=name;}
-	public String getEmail() {return eMail;}
-	public void setEmail(String correu) {eMail=correu;}
-	public float getTelefon() {return telefon;}
-	public void setTelefon(float tel) {telefon=tel;}
+
+	public String getEmail() {return email;}
+	public void setEmail(String correu) {email=correu;}
+
+	public String getTelefon() {return telefon;}
+	public void setTelefon(String tel) {telefon=tel;}
 	
+
+	// CHECK: *
 	public Comanda consultarComanda(/*codiSeguiment*/) {
-		return new Comanda();
+		return null;
 	}
 	public Geolocalitzacio geolocalitzacioComanda(/*codiSeguiment*/) {
-		return new Geolocalitzacio();
+		return null;
 	}
 	public Date calcularEnviament(/*dataCreacio*/) {
 		return null;

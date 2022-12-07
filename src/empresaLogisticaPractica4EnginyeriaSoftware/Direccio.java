@@ -13,10 +13,13 @@ public class Direccio {
 	
 	public String getCarrer() {return carrer;}
 	public void setCarrer(String carrer) {this.carrer=carrer;}
+
 	public String getPoblacio() {return poblacio;}
 	public void setPoblacio(String poble) {poblacio=poble;}
+
 	public int getNumero() { return numero;}
 	public void setNumero(int num) {numero=num;}
+	
 	public int getCodiPostal() { return codiPostal;}
 	public void setCodiPostal(int codi) {codiPostal=codi;}
 }
