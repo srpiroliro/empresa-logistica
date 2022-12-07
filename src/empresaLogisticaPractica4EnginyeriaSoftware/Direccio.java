@@ -3,12 +3,12 @@ package empresaLogisticaPractica4EnginyeriaSoftware;
 public class Direccio {
 	private String carrer, poblacio;
 	private int numero, codiPostal;
-	
-	public Direccio() {
-		carrer=null;
-		poblacio=null;
-		numero=0;
-		codiPostal=0;
+
+	public Direccio(String carrer, String poblacio, int numero, int codiPostal) {
+		this.carrer=carrer;
+		this.poblacio=poblacio;
+		this.numero=numero;
+		this.codiPostal=codiPostal;
 	}
 	
 	public String getCarrer() {return carrer;}
