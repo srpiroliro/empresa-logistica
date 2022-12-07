@@ -1,0 +1,1 @@
+Un projecte fet en Java que implementi “totes” les classes, cadascuna amb les propietats i mètodes que els diagrames de classes indiquin. Els mètodes han de tenir només la sentencia “return”, de forma tal que el projecte “compili”. Dintre de cada mètode, en format comentari ha de sortir escrit l’objectiu del mètode, és a dir quina és la part del negoci que implementa.
