@@ -2,6 +2,9 @@ package empresaLogisticaPractica4EnginyeriaSoftware;
 
 public class Repartidor {
 	private String horari, correu, contrasenya;
+
+	private Comanda comandes[]; // CHECK: notes
+	// CHECK: guardem valoracions?
 	
 	public Repartidor(String h, String cor, String con) {
 		horari=h;
@@ -20,7 +23,7 @@ public class Repartidor {
 	
 
 
-	// CHECK: *
+	// CHECK: notes todo
 	public void modificarComanda() {/*codi*/}
 
 	public void llistarComanda() {/*codi*/}

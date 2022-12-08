@@ -1,0 +1,45 @@
+"Les comandes que no s'entreguin el dia estipulat (estimació de temps feta pel nostre sistema), es prioritzaran per ser entregades l'endemà"
+ - llista de comandes organitzades per dia d'entrega. Comanda implements Comparable?
+
+
+"Per entregar la comanda el dia estipulat, s’haurà d’enregistrar la comanda al sistema, com a molt tard, el dia anterior abans de les 23:59 h."
+ - Si dia d'entrega==dia creacio => dia d'entrega++;
+
+
+"Les entregues es fan a la península d’Espanya. Les adreces introduïdes a la comanda pel client s’han de verificar."
+verificar adreca
+
+"S’ha d’enviar un codi de seguiment al correu electrònic del receptor (Client de la Tenda online) quan es crea la comanda."
+ - enviar codi de seguiment
+
+"S’ha d’oferir un seguiment del paquet al client i al receptor, on es podrà visualitzar si:
+El paquet està pendent d’enviament (en tràmit)
+El paquet es troba en camí
+El paquet s’ha entregat"
+ - funcio amb seguiemt (es el mateix que getEstat?)
+ - crear variable estatica
+
+"S’ha de poder donar un preu final i una estimació de temps per fer l’entrega al client en funció de:
+La distància entre el punt de recollida i el punt d’entrega
+Pes i dimensions de la comanda (les restriccions de pes i dimensions les defineix el transport que ha de fer l’enviament)"
+ - calcular preu
+
+
+"Notificar al receptor via email quan el paquet canvia d’estat:
+En tràmit -> En camí
+En tràmit -> Eliminada
+En camí -> Entregat"
+ - void sendEmail()
+
+"S’ha de poder demanar feedback de l’enviament al receptor (sobre el repartidor). Serà necessari una puntuació però el comentari serà opcional. L’avaluació es podrà fer un cop la comanda ha estat entregada a través de la web de logística."
+ - transportista guarda comandes?
+
+"El repartidor ha de poder consultar les comandes que te assignades."
+ - repartidor guardar comandes assignades
+
+"El repartidor ha de poder veure el detall d’una comanda a través de la web de logística."
+ - toString?
+
+
+"La geolocalització es farà a la web de logística i per veure el seguiment d’una comanda es farà servir el codi de seguiment. A més, la comanda ha d’estar en cami."
+ - 

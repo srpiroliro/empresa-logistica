@@ -14,18 +14,17 @@ public class Client {
 	
 	// CHECK: aixo a aqui o a comanda?
 	public void crearComanda(Date entrega, String dimensions, String classe_entrega, int prior, float pes, Date creacio, String codi) {
-		Comanda nova=new Comanda(entrega,dimensions,classe_entrega, prior,pes,creacio,codi);
-		// CHECK: comanda la guardem aqui?
-		// CHECK: llista de comandes fetes? + getter comanda activa/mes recent? (o es complicarse massa la vida)
+		Comanda nova=new Comanda(entrega,dimensions,classe_entrega,prior,pes,creacio,codi);
+		// CHECK: comanda la guardem aqui en una llista? (llista de comandes fetes? + getter comanda activa/mes recent? (o es complicarse massa la vida))
 	}
 
 
 
 	// CHECK: modificar aqui o fer servir els sets publics?
 	// CHECK: se li passa comanda, id de comanda o s'agafa la comanda assignada al client(client pot tenir varies comandes)?
-	public void modificarComanda(String que, Object valor/*, Comanda comanda */) throws Exception {
-		// valors acceptables a `que`: entrega,dimensions,classeEntrega,prioritat,pes,creacio,codi
-		
+	public void modificarComanda(String que, Object valor, int id_comanda) throws Exception {
+		// valors acceptables a `que`: [entrega,dimensions,classeEntrega,prioritat,pes,creacio,codi]
+		// Comanda comanda=getComandaByID(id_comanda)
 		switch(que) {
 			case "entrega":
 				// comanda.setEntrega((Date) valor)
@@ -51,6 +50,9 @@ public class Client {
 			default: throw new Exception();
 		}
 	}
-	public void eliminarComanda(/*id comanda*/) {return; /* cancela la comanda */}
-	public void consultarComanda(/*id comanda*/) {return; /*omplir*/}
+	public void eliminarComanda(int id) {return; /* cancela la comanda */}
+	public void consultarComanda(int id) {
+		// return getComandaByID(id).toString();
+		return;
+	}
 }
