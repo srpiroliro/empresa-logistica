@@ -5,26 +5,27 @@ import java.util.Date;
 public class Client {
 	private String horari;
 	
-	public Client() {this("");} // CHECK: 
 	public Client(String h) {horari=h;}
 	
 	public void setHorari(String horari) {this.horari=horari;}
 	public String getHorari() {return horari;}
-	
-	
-	// CHECK: aixo a aqui o a comanda?
-	public void crearComanda(Date entrega, String dimensions, String classe_entrega, int prior, float pes, Date creacio, String codi) {
+
+	public String crearComanda(Date entrega, String dimensions, String classe_entrega, int prior, float pes, Date creacio, String codi) {
 		Comanda nova=new Comanda(entrega,dimensions,classe_entrega,prior,pes,creacio,codi);
-		// CHECK: comanda la guardem aqui en una llista? (llista de comandes fetes? + getter comanda activa/mes recent? (o es complicarse massa la vida))
+		// guardar la comanda a la base de dades i retorna el codi de segiument.
+		return null;
+	}
+
+	// versio simple
+	public void modificarComanda(/* que es vol modificar i el seu valor,*/ String codi_seguiment) throws Exception {
+		// agafara la comanda que tingui el mateix codi_seguiment de la base de dades i la modificara. 
 	}
 
 
-
-	// CHECK: modificar aqui o fer servir els sets publics?
-	// CHECK: se li passa comanda, id de comanda o s'agafa la comanda assignada al client(client pot tenir varies comandes)?
-	public void modificarComanda(String que, Object valor, int id_comanda) throws Exception {
+	// versio complicada
+	public void modificarComanda(String que, Object valor, String codi_seguiment) throws Exception {
 		// valors acceptables a `que`: [entrega,dimensions,classeEntrega,prioritat,pes,creacio,codi]
-		// Comanda comanda=getComandaByID(id_comanda)
+		// Comanda comanda=getComandaByCodiSeguiment(codi_seguiment)
 		switch(que) {
 			case "entrega":
 				// comanda.setEntrega((Date) valor)
@@ -50,9 +51,15 @@ public class Client {
 			default: throw new Exception();
 		}
 	}
-	public void eliminarComanda(int id) {return; /* cancela la comanda */}
-	public void consultarComanda(int id) {
+
+
+	public boolean eliminarComanda(int id) {
+		/* cancela la comanda. retornara true o false depenent de si s'ha aconseguit eliminarla o no. */
+		return false; 
+	}
+	public Comanda consultarComanda(int id) {
+		// retorna la comanda del id que s'ha passat com a parametre.
 		// return getComandaByID(id).toString();
-		return;
+		return null;
 	}
 }
