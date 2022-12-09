@@ -8,16 +8,26 @@ public class Comanda {
 	private String estat, classeEntrega, codiSeguiment;
 	private int prioritat;
 
-	public Comanda(Date entrega, String dimensions, String classe_entrega, int prior, float pes, Date creacio, String codi){
-		dataEntrega=entrega;
+	public Comanda(Date entrega, String dimensions, String classe_entrega, int prior, float pes){
+		this.dataEntrega=entrega;
 		this.dimensions=dimensions;
-		classeEntrega=classe_entrega;
-		prioritat=prior;
+		this.classeEntrega=classe_entrega;
+		this.prioritat=prior;
 		this.pes=pes;
-		dataCreacio=creacio;
-		codiSeguiment=codi;
-		estat="En tràmit"; // "paquet està pendent d’enviament"
+
+		this.dataCreacio=new Date(); // dia actual.
+
+		this.codiSeguiment=null; 
+		// el codi de seguiment s'hauria de generar tenint en compte les ultimes comandes rebudes,
+		// ja que aquesta ha de ser unic.
+
+		estat="En tràmit"; // == "paquet està pendent d’enviament"
 	}
+
+	public void assignarComanda(String codi_seguiment){
+		// Asigna la comanda especificada a un repartidor
+  	}
+
 	
 	public void setPes(float pes) {this.pes=pes;}
 	public float getPes() {return pes;}
@@ -42,4 +52,6 @@ public class Comanda {
 
 	public void setPrioritat(int pr) {prioritat=pr;}
 	public int getPrioritat() {return prioritat;}
+
+	// private String generar_codi() {return null;}
 }
