@@ -25,17 +25,21 @@ public class Receptor {
 	public void setTelefon(String tel) {telefon=tel;}
 	
 
-	// CHECK: *
-	public Comanda consultarComanda(/*codiSeguiment*/) {
+	public Comanda consultarComanda(String codi_seguiment){
+		// retorna la comanda amb el especificat codi de seguiment desde la base de dades.
 		return null;
 	}
-	public Geolocalitzacio geolocalitzacioComanda(/*codiSeguiment*/) {
+	public Geolocalitzacio geolocalitzacioComanda(String codi_seguiment) {
+		// si l'usuari ha demanat la opcio de poder geolocalitzar la comanda, retorna l'objecte
+		// Geolocalitzacio amb el qual es pot saber la ubicacio directe.
+		// En cas contrari retornara null.
+
 		return null;
 	}
-	public Date calcularEnviament(/*dataCreacio*/) {
-		return null;
-	}
-	public Valoracio valorarRepartidor(/*id repartidor*/) {
-		return new Valoracio();
+	public void valorarRepartidor(int id_repartidor, int puntuacio, String comentari) {
+		// aquesta valoracio s'assignara al repartidor amb el id corresponent.
+		// es guardaran a la base de dades de valoracions.
+		Valoracio v=new Valoracio(puntuacio, comentari);
+		// guardar
 	}
 }

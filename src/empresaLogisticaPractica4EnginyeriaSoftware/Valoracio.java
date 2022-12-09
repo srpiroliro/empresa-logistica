@@ -5,8 +5,7 @@ public class Valoracio {
 	private String comentari;
 	
 	public Valoracio(int p, String c) {
-		puntuacio=p;
-		comentari=c;
+		puntuacio=p; comentari=c;
 	}
 	
 	public int getPuntuacio() {return puntuacio;}

@@ -27,6 +27,11 @@ public class Comanda {
 	public void assignarComanda(String codi_seguiment){
 		// Asigna la comanda especificada a un repartidor
   	}
+	public Date calcularEnviament(/*dataCreacio*/) {
+		//En funció de la data de creació calcular quant trigarà en enviar-se la comanda.
+		//Torna la data d’entrega
+		return null;
+	}
 
 	
 	public void setPes(float pes) {this.pes=pes;}
@@ -54,4 +59,5 @@ public class Comanda {
 	public int getPrioritat() {return prioritat;}
 
 	// private String generar_codi() {return null;}
+
 }

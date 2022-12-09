@@ -52,7 +52,6 @@ public class Client {
 		}
 	}
 
-
 	public boolean eliminarComanda(int id) {
 		/* cancela la comanda. retornara true o false depenent de si s'ha aconseguit eliminarla o no. */
 		return false; 
