@@ -10,8 +10,8 @@ public class Client {
 	public void setHorari(String horari) {this.horari=horari;}
 	public String getHorari() {return horari;}
 
-	public String crearComanda(Date entrega, String dimensions, String classe_entrega, int prior, float pes, Date creacio, String codi) {
-		Comanda nova=new Comanda(entrega,dimensions,classe_entrega,prior,pes,creacio,codi);
+	public String crearComanda(Date entrega, String dimensions, String classe_entrega, int prior, float pes) {
+		Comanda nova=new Comanda(entrega,dimensions,classe_entrega,prior,pes);
 		// guardar la comanda a la base de dades i retorna el codi de segiument.
 		return null;
 	}
