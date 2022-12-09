@@ -1,7 +1,5 @@
 package empresaLogisticaPractica4EnginyeriaSoftware;
 
-import java.sql.Date;
-
 public class Receptor {
 	private String dni, nom, email, telefon;
 
